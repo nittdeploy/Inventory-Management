@@ -14,7 +14,10 @@
 -- @version     0.1
 --
 -- @date        2025-05-18
---              - Initial step.
+--              - Initial step
+--
+-- @date        2025-05-19
+--              - Locations table
 --
 
 -- Create the database and use it for the next statements. The name
@@ -22,6 +25,22 @@
 --
 CREATE DATABASE inventory;
 USE inventory;
+
+-- First create the locations table the items table depends on.
+--
+--              id: The auto-incremented primary key to identify an entry.
+--            room: Room name or geographical location.
+--           shelf: Shelf or cupboard of the room.
+--     compartment: Compartment or drawer of the shelf/cupboard.
+--           field: Field name/ position inside the compartment/ drawer.
+--
+CREATE TABLE locations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    room VARCHAR(100) NOT NULL,
+    shelf VARCHAR(100) NOT NULL,
+    compartment VARCHAR(100),
+    field VARCHAR(100)
+);
 
 -- Create the items table. Adapt the max. number of chars in VARCHAR if needed.
 --
