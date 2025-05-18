@@ -4,6 +4,9 @@
 --
 -- @brief       Create database
 --
+-- @detailed    Create the database and its tables. The SQL dialect is the
+--              mysql-based syntax.
+--
 -- @author      Timur Nitt <tn.devel@nittix.info>
 --
 -- @copyright   © 2025 Timur Nitt
@@ -14,12 +17,13 @@
 --              - Initial step.
 --
 
--- Create the database. The name 'inventory' is an example.
+-- Create the database and use it for the next statements. The name
+-- 'inventory' is just an example.
 --
 CREATE DATABASE inventory;
+USE inventory;
 
--- Create the items table. You can choose another name if you'd like. Adapt
--- the max. number of chars in VARCHAR if needed.
+-- Create the items table. Adapt the max. number of chars in VARCHAR if needed.
 --
 --              id: The auto-incremented primary key to identify an entry.
 --            name: Name of the tool, material or a special kind of component.
